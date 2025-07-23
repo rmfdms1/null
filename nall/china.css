@@ -10,18 +10,99 @@ body {
     position: relative;
   }
   
-  .menu {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* 메뉴 버튼 스타일 */
+.menu-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
     background: yellow;
     color: black;
-    padding: 5px 10px;
+    padding: 10px 15px;
     font-weight: bold;
-    z-index: 10;
+    cursor: pointer;
+    z-index: 1001;
+    user-select: none;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  }
+  
+  /* 사이드 메뉴 기본 숨김 상태, 왼쪽 -200px 위치 (넓이에 따라 조절) */
+  .side-menu {
+    position: fixed;
+    top: 0;
+    left: -220px;  /* 메뉴 넓이 만큼 음수로 숨김 */
+    width: 200px;
+    height: 100vh;
+    background-color: #004080;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    padding: 60px 20px 20px 20px;
+    box-sizing: border-box;
+    transition: left 0.3s ease;
+    z-index: 1000;
     user-select: none;
   }
   
+  /* 메뉴가 열렸을 때 위치 */
+  .side-menu.open {
+    left: 0;
+  }
+  
+  /* 메뉴 안 리스트 */
+  .side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .side-menu li {
+    margin-bottom: 15px;
+  }
+  
+  .side-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  
+  .side-menu a:hover {
+    text-decoration: underline;
+  }
+  .menu-part {
+    margin-bottom: 40px;
+  }
+  
+  .menu-part h2 {
+    color: #aaddff;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #aaddff;
+    padding-bottom: 6px;
+    user-select: none;
+  }
+  
+  .menu-part ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    max-height: 300px; /* 길어질 경우 스크롤 */
+    overflow-y: auto;
+  }
+  
+  .menu-part ul li {
+    margin-bottom: 10px;
+  }
+  
+  .menu-part ul li a {
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  
+  .menu-part ul li a:hover {
+    text-decoration: underline;
+  }
   .timeline {
     display: flex;
     align-items: center;
@@ -129,5 +210,8 @@ body {
   
   .arrows button:hover {
     color: #00ffff;
+  }
+  a {
+    color: red;
   }
   

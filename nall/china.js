@@ -41,7 +41,23 @@ const markersContainer = document.getElementById("markers-container");
 const progressBar = document.getElementById("progress-bar");
 const prevBtn = document.getElementById("prev-btn");
 const nextBtn = document.getElementById("next-btn");
+const menuButton = document.querySelector('.menu-button');
+const sideMenu = document.querySelector('.side-menu');
 
+// 메뉴 버튼 클릭시 열기/닫기 토글 (선택사항)
+menuButton.addEventListener('click', () => {
+  sideMenu.classList.toggle('open');
+});
+
+// 마우스가 사이드 메뉴 영역 밖으로 나가면 닫기
+sideMenu.addEventListener('mouseleave', () => {
+  sideMenu.classList.remove('open');
+});
+
+// 마우스가 메뉴 버튼에 올라가면 메뉴 열기
+menuButton.addEventListener('mouseenter', () => {
+  sideMenu.classList.add('open');
+});
 function renderMarkers() {
   markersContainer.innerHTML = "";
   for (let i = 0; i < steps.length; i++) {

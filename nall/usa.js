@@ -1,7 +1,7 @@
 const steps = [
-  `1. 1958년: NASA(미국 항공우주국) 설립 — 우주 시대의 본격적인 개막<br><br>
+  `1. 1958년: <a href="jab1.html" target="_blank">NASA</a> 설립 — 우주 시대의 본격적인 개막<br><br>
   1958년, 소련이 인공위성 스푸트니크 1호를 성공적으로 발사한 것에 충격을 받은 미국은,
-  항공자문위원회(NACA)를 전면 개편하여 NASA(National Aeronautics and Space Administration)를 창설하였다.<br><br>
+  항공자문위원회를 전면 개편하여 NASA를 창설하였다.<br><br>
   이는 냉전 체제 속에서 과학기술과 체제 경쟁의 주도권을 장악하려는 전략적 결정이었으며,
   NASA는 군과 민간을 통합한 우주 전문기관으로 자리잡는다.<br><br>
   이듬해부터 본격적인 유인 우주비행과 장기적인 달 탐사 계획이 논의되었고,
@@ -65,6 +65,23 @@ const markersContainer = document.getElementById("markers-container");
 const progressBar = document.getElementById("progress-bar");
 const prevBtn = document.getElementById("prev-btn");
 const nextBtn = document.getElementById("next-btn");
+const menuButton = document.querySelector('.menu-button');
+const sideMenu = document.querySelector('.side-menu');
+
+// 메뉴 버튼 클릭시 열기/닫기 토글 (선택사항)
+menuButton.addEventListener('click', () => {
+  sideMenu.classList.toggle('open');
+});
+
+// 마우스가 사이드 메뉴 영역 밖으로 나가면 닫기
+sideMenu.addEventListener('mouseleave', () => {
+  sideMenu.classList.remove('open');
+});
+
+// 마우스가 메뉴 버튼에 올라가면 메뉴 열기
+menuButton.addEventListener('mouseenter', () => {
+  sideMenu.classList.add('open');
+});
 
 function renderMarkers() {
   markersContainer.innerHTML = "";
