@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>달의 중심</title>
+  <link rel="stylesheet" href="gol.css" />
+</head>
+<body>
+  <img src="문.png" alt="달 중심 이미지" class="center-moon" id="easter-moon" />
+
+  <!-- 나라별 버튼 -->
+  <div class="planet-button usa" data-link="usa.html">🇺🇸</div>
+  <div class="planet-button soviet" data-link="soviet.html">☭</div>
+  <div class="planet-button china" data-link="china.html">🇨🇳</div>
+  <div class="planet-button india" data-link="india.html">🇮🇳</div>
+  <div class="planet-button japan" data-link="japan.html">🇯🇵</div>
+
+  <div class="easter-egg-message" id="easter-egg">
+    🚀 달에 도착했으니 깃발을 꽂읍시다! 🌕<br />
+    <a href="secret.html">▶ 퀴즈풀기!</a>
+  </div>
+
+  <script>
+    const moon = document.getElementById("easter-moon");
+    const egg = document.getElementById("easter-egg");
+    let clickCount = 0;
+
+    moon.addEventListener("click", () => {
+      clickCount++;
+      if (clickCount === 5) {
+        egg.style.display = "block";
+      }
+    });
+
+    document.querySelectorAll(".planet-button").forEach(button => {
+      button.addEventListener("click", () => {
+        const link = button.getAttribute("data-link");
+        window.location.href = link;
+      });
+    });
+  </script>
+</body>
+</html>

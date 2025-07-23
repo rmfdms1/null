@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: '맑은 고딕', sans-serif;
+  background: url("dnwn.webp") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: yellow;
+  color: black;
+  padding: 5px 10px;
+  font-weight: bold;
+  z-index: 10;
+  user-select: none;
+}
+
+.timeline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  margin-top: 50px;
+}
+
+.planet {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.progress-bar {
+  position: relative;
+  flex: 1;
+  height: 80px;
+  margin: 0 10px;
+  user-select: none;
+}
+
+.rocket {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  height: 60px;
+  transition: left 0.6s ease-in-out;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.markers {
+  display: flex;
+  height: 20px;
+  margin-top: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.marker {
+  width: 10px;
+  height: 40px;
+  background-color: orange;
+  margin: 0 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.marker.active {
+  background-color: white;
+  height: 60px;
+}
+
+.star-flash {
+  position: absolute;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, white, transparent);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s, left 0.3s, top 0.3s;
+  z-index: 4;
+}
+
+.content-box {
+  background: rgba(0, 51, 204, 0.8);
+  border-radius: 20px;
+  max-width: 600px;
+  height: 580px;
+  margin: 40px auto 0;
+  padding: 30px;
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  line-height: 1.6;
+}
+
+.arrows {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  user-select: none;
+}
+
+.arrows button {
+  font-size: 60px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin: 0 50px;
+  transition: color 0.3s ease;
+}
+
+.arrows button:hover {
+  color: #00ffff;
+}

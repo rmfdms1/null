@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("dark.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    font-family: '맑은 고딕', sans-serif;
+    position: relative;
+  }
+  
+  /* 중앙 달 이미지 */
+  .center-moon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  .center-moon:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  
+  /* 나라별 원 버튼 */
+  .planet-button {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #ffffffcc, #cccccc88);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: black;
+    cursor: pointer;
+    animation: fly-in 1s ease-out forwards;
+    opacity: 0;
+  }
+  
+  /* 위치 설정 */
+  .usa     { top: 10%; left: 20%; animation-delay: 0.2s; }
+  .soviet  { top: 20%; right: 15%; animation-delay: 0.4s; }
+  .china   { bottom: 25%; left: 15%; animation-delay: 0.6s; }
+  .india   { bottom: 10%; right: 20%; animation-delay: 0.8s; }
+  .japan   { top: 50%; left: 85%; transform: translateY(-50%); animation-delay: 1s; }
+  
+  /* 애니메이션: 밖에서 날아오기 */
+  @keyframes fly-in {
+    0% {
+      transform: scale(0) translateY(-200px);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* 이스터에그 팝업 */
+  .easter-egg-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    padding: 25px 35px;
+    border-radius: 15px;
+    font-size: 18px;
+    text-align: center;
+    display: none;
+    z-index: 999;
+    animation: pop-up 0.5s ease-out;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+  }
+  
+  @keyframes pop-up {
+    0% { transform: scale(0.5) translate(-50%, -50%); opacity: 0; }
+    100% { transform: scale(1) translate(-50%, -50%); opacity: 1; }
+  }
+  
+  .easter-egg-message a {
+    color: #00ffff;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  

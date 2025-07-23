@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>일본의 달 탐사 타임라인</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="menu">메뉴</div>
+
+  <div class="timeline">
+    <img src="지구.png" class="planet earth" alt="지구">
+    <div class="progress-bar">
+      <div class="star-flash" id="star-flash"></div>
+      <img src="미사일.png" class="rocket" id="rocket" alt="로켓">
+      <div class="markers">
+        <div class="marker"></div>
+        <div class="marker"></div>
+        <div class="marker"></div>
+        <div class="marker"></div>
+        <div class="marker"></div>
+        <div class="marker"></div>
+      </div>
+    </div>
+    <img src="달.png" class="planet moon" alt="달">
+  </div>
+
+  <div class="content-box" id="content-box">
+    <div id="description">타임라인 설명이 여기에 표시됩니다.</div>
+  </div>
+
+  <div class="arrows">
+    <button onclick="prevStep()">❮</button>
+    <button onclick="nextStep()">❯</button>
+  </div>
+
+  <script src="script5.js"></script>
+</body>
+</html>

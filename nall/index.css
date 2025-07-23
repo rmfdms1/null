@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("march37.jpg") no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    z-index: 10;
+    cursor: pointer;
+  }
+  
+  .planet-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .planet-button {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    line-height: 140px;
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    transition: all 1s ease;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .planet-button:hover {
+    transform: scale(1.05);
+    z-index: 1;
+  }
+  
+  .planet-tooltip {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    font-size: 13px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+  
+  .planet-button:hover .planet-tooltip {
+    opacity: 1;
+  }
+  
+  /* 각 국가 색상 */
+  .planet-button.usa {
+    background: rgba(30, 144, 255, 0.7); /* DodgerBlue */
+    border: 2px solid white;
+  }
+  
+  .planet-button.china {
+    background: rgba(220, 20, 60, 0.75); /* Crimson */
+    border: 2px solid gold;
+  }
+  
+  .planet-button.russia {
+    background: rgba(139, 0, 0, 0.8); /* DarkRed */
+    border: 2px solid silver;
+  }
+  
+  .planet-button.japan {
+    background: white;
+    color: crimson;
+    border: 2px solid crimson;
+  }
+  
+  .planet-button.india {
+    background: rgba(255, 140, 0, 0.8); /* DarkOrange */
+    border: 2px solid white;
+  }
+  
