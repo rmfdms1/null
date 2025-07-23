@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>설명 페이지 템플릿</title>
+<style>
+  /* 전체 레이아웃: 좌우 파란색 배경 */
+  body, html {
+    margin: 0; padding: 0; height: 100%;
+    background-color: #004080; /* 진한 파랑 */
+    font-family: '맑은 고딕', sans-serif;
+    color: white;
+  }
+  /* 플렉스 박스로 수평 정렬, 좌우는 flex-grow로 채움 */
+  .container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+  }
+  .side {
+    flex-grow: 1;
+    background-color: #0066cc; /* 조금 밝은 파랑 */
+  }
+  .center {
+    flex-grow: 0;
+    width: 800px;
+    background-color: #003366; /* 중앙 배경 더 진한 파랑 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 30px;
+    box-sizing: border-box;
+  }
+
+  /* 제목 스타일 */
+  h1 {
+    margin: 0 0 20px 0;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /* 이미지 스타일 */
+  .image-area {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .image-area img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  }
+
+  /* 설명 텍스트 */
+  .description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+    user-select: text;
+  }
+
+  /* 반응형 (화면 좁아질 때) */
+  @media (max-width: 900px) {
+    .container {
+      flex-direction: column;
+    }
+    .side {
+      height: 50px;
+      width: 100%;
+    }
+    .center {
+      width: 100%;
+      height: calc(100vh - 100px);
+      padding: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="side"></div>
+
+  <main class="center" role="main" aria-label="설명 컨텐츠 영역">
+    <h1 id="title">여기에 제목이 들어갑니다</h1>
+
+    <div class="image-area" id="image-area">
+      <!-- 이미지가 여기에 표시됩니다 -->
+      <img src="example.jpg" alt="설명 이미지" id="main-image" />
+    </div>
+
+    <div class="description" id="description">
+      여기에 설명 내용이 표시됩니다.
+    </div>
+  </main>
+
+  <div class="side"></div>
+</div>
+
+<script>
+  // 필요하면 자바스크립트로 내용 동적 변경 가능
+  // 예시: 페이지 로드시 데이터 세팅
+  window.onload = function() {
+    const titleEl = document.getElementById('title');
+    const imageEl = document.getElementById('main-image');
+    const descEl = document.getElementById('description');
+
+    // 예시 데이터 (필요하면 변경)
+    titleEl.textContent = "루나 프로그램";
+    imageEl.src = "nasa.svg";
+    imageEl.alt = "창어 1호 달 탐사선 이미지";
+    descEl.innerHTML = `
+NASA(미국 항공우주국)는 1958년 설립된 미국의 우주 개발 기관으로, 아폴로 11호 달 착륙을 비롯해 다양한 우주 탐사와 과학 연구를 수행해왔다. 현재는 아르테미스 프로그램으로 유인 달 탐사를 재개 중이며, 제임스 웹 우주망원경으로 우주의 기원을 연구하고 있다. 국제우주정거장 운영, 기후 변화 감시, 민간 우주 기업과의 협업 등도 진행 중이며, NASA는 인류의 우주 탐사와 미래 기술 발전을 이끄는 중심 기관이다.
+    `;
+  }
+</script>
+
+</body>
+</html>
