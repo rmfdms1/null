@@ -40,6 +40,30 @@
     font-weight: bold;
     text-align: center;
   }
+  .floating-back {
+  position: fixed;
+  left: 20px;
+  top: 3%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #003366;
+  text-decoration: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: background-color 0.3s, color 0.3s;
+}
+.floating-back:hover {
+  background-color: #ffcc00;
+  color: #000;
+}
 
   /* 이미지 스타일 */
   .image-area {
@@ -98,7 +122,6 @@
 
   <div class="side"></div>
 </div>
-
 <script>
   // 필요하면 자바스크립트로 내용 동적 변경 가능
   // 예시: 페이지 로드시 데이터 세팅
@@ -115,6 +138,6 @@
 ISRO(인도우주연구기구)는 인도의 우주개발을 담당하는 우주기구이다. 벵갈루루에 본부를 두고 있으며, 미화 약 20억 달러(2021년)를 예산으로 약 2만 명의 직원이 소속되어 있다. 우주와 관련된 기술과 그 응용을 목적으로 한다. 중국의 국가항천국, 일본의 JAXA와 함께 아시아의 우주개발을 선도하고 있다.  `;
   }
 </script>
-
+<a href="india.html" class="floating-back" aria-label="뒤로가기">←</a>
 </body>
 </html>

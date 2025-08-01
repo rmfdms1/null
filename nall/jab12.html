@@ -40,6 +40,30 @@
     font-weight: bold;
     text-align: center;
   }
+  .floating-back {
+  position: fixed;
+  left: 20px;
+  top: 3%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #003366;
+  text-decoration: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: background-color 0.3s, color 0.3s;
+}
+.floating-back:hover {
+  background-color: #ffcc00;
+  color: #000;
+}
 
   /* 이미지 스타일 */
   .image-area {
@@ -98,7 +122,6 @@
 
   <div class="side"></div>
 </div>
-
 <script>
   // 필요하면 자바스크립트로 내용 동적 변경 가능
   // 예시: 페이지 로드시 데이터 세팅
@@ -115,6 +138,6 @@
 중계 위성은 통신을 주목적으로 우주에 머무르고 있는 인공위성이다. 현대의 통신 위성들은 정지궤도, 몰니야 궤도, 다른 타원궤도와 지구 저궤도(극궤도와 비극궤도)등 다양한 궤도를 사용한다.   `;
   }
 </script>
-
+<a href="china.html" class="floating-back" aria-label="뒤로가기">←</a>
 </body>
 </html>

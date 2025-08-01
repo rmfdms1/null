@@ -40,6 +40,30 @@
     font-weight: bold;
     text-align: center;
   }
+  .floating-back {
+  position: fixed;
+  left: 20px;
+  top: 3%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #003366;
+  text-decoration: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: background-color 0.3s, color 0.3s;
+}
+.floating-back:hover {
+  background-color: #ffcc00;
+  color: #000;
+}
 
   /* 이미지 스타일 */
   .image-area {
@@ -98,7 +122,6 @@
 
   <div class="side"></div>
 </div>
-
 <script>
   // 필요하면 자바스크립트로 내용 동적 변경 가능
   // 예시: 페이지 로드시 데이터 세팅
@@ -115,6 +138,6 @@
 찬드라얀-1는 는 인도의 달 탐사선으로, 현지 시간 2008년 10월 22일 오전 6시 22분(UTC+5:30)에 인도 안드라프라데시 주 스리하리코타의 사티시 다완 우주 센터(Satish Dhawan Space Centre)에서 자체 개발한 PSLV-C11 로켓에 탑재되어 발사되었다.[1][2] '찬드라얀'은 산스크리트어로 '달 우주선'을 의미한다.
  `}
 </script>
-
+<a href="china.html" class="floating-back" aria-label="뒤로가기">←</a>
 </body>
 </html>

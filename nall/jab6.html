@@ -52,6 +52,30 @@
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(255,255,255,0.3);
   }
+  .floating-back {
+  position: fixed;
+  left: 20px;
+  top: 3%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #003366;
+  text-decoration: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: background-color 0.3s, color 0.3s;
+}
+.floating-back:hover {
+  background-color: #ffcc00;
+  color: #000;
+}
 
   /* 설명 텍스트 */
   .description {
@@ -98,7 +122,6 @@
 
   <div class="side"></div>
 </div>
-
 <script>
   // 필요하면 자바스크립트로 내용 동적 변경 가능
   // 예시: 페이지 로드시 데이터 세팅
@@ -115,6 +138,6 @@
 보스토크 1호는 보스토크 계획의 소련 우주선으로, 세계 최초로 사람을 태우고 지구 궤도를 돈 우주선이다. 이 비행은 소련 우주 프로그램의 가장 큰 성공 중 하나이며 소련과 미국 간의 우주 경쟁에서 이정표로 여겨진다. 미국의 첫 유인 궤도 비행은 10개월 후인 1962년 2월에 머큐리-아틀라스 6호로 이루어졌다.   `;
   }
 </script>
-
+<a href="soviet.html" class="floating-back" aria-label="뒤로가기">←</a>
 </body>
 </html>

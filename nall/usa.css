@@ -5,10 +5,10 @@ body {
   background: url("dnwn.webp") no-repeat center center fixed;
   background-size: cover;
   color: white;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
+  min-height: 100vh;     /* 콘텐츠가 많아지면 늘어나도록 */
+  overflow-y: auto;       /* 세로 스크롤 허용 */
 }
+
 
 /* 메뉴 버튼 스타일 */
 .menu-button {
@@ -40,6 +40,7 @@ body {
   transition: left 0.3s ease;
   z-index: 1000;
   user-select: none;
+  overflow-y: auto;   
 }
 
 /* 메뉴가 열렸을 때 위치 */
@@ -47,12 +48,19 @@ body {
   left: 0;
 }
 
-/* 메뉴 안 리스트 */
-.side-menu ul {
+.menu-part ul {
   list-style: none;
-  padding: 0;
+  padding-left: 0;
   margin: 0;
+  /* max-height와 overflow-y 제거 */
 }
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap; /* 반응형 유도 */
+}
+
 
 .side-menu li {
   margin-bottom: 15px;
@@ -85,8 +93,6 @@ body {
   list-style: none;
   padding-left: 0;
   margin: 0;
-  max-height: 300px; /* 길어질 경우 스크롤 */
-  overflow-y: auto;
 }
 
 .menu-part ul li {

@@ -32,6 +32,30 @@
     padding: 40px 30px;
     box-sizing: border-box;
   }
+  .floating-back {
+  position: fixed;
+  left: 20px;
+  top: 3%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #003366;
+  text-decoration: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: background-color 0.3s, color 0.3s;
+}
+.floating-back:hover {
+  background-color: #ffcc00;
+  color: #000;
+}
 
   /* 제목 스타일 */
   h1 {
@@ -98,7 +122,6 @@
 
   <div class="side"></div>
 </div>
-
 <script>
   // 필요하면 자바스크립트로 내용 동적 변경 가능
   // 예시: 페이지 로드시 데이터 세팅
@@ -115,6 +138,6 @@
 JAXA(국립연구개발법인 우주항공연구기구)는 일본의 우주 개발 정책을 담당하는 일본 문부과학성 소속 독립 행정 법인 기관이다.   `;
   }
 </script>
-
+<a href="japan.html" class="floating-back" aria-label="뒤로가기">←</a>
 </body>
 </html>
